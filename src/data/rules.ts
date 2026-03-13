@@ -1,0 +1,59 @@
+export interface Rule {
+  title: string;
+  severity: "info" | "warning" | "ban_temp" | "ban_def";
+  description: string;
+}
+
+export interface RuleCategory {
+  name: string;
+  icon: string;
+  rules: Rule[];
+}
+
+export const SEVERITY_LABELS: Record<string, { label: string; class: string }> = {
+  info: { label: "Info", class: "badge-cyan" },
+  warning: { label: "Avertissement", class: "badge-amber" },
+  ban_temp: { label: "Ban temporaire", class: "badge-purple" },
+  ban_def: { label: "Ban définitif", class: "badge-red" },
+};
+
+export const RULES: RuleCategory[] = [
+  {
+    name: "Chat & Comportement",
+    icon: "💬",
+    rules: [
+      { title: "Insultes et harcèlement", severity: "ban_temp", description: "Toute insulte, menace ou harcèlement envers un joueur entraîne un mute puis un ban temporaire." },
+      { title: "Spam et flood", severity: "warning", description: "Ne pas envoyer plus de 3 messages consécutifs ou répéter le même message." },
+      { title: "Publicité", severity: "ban_def", description: "Toute publicité pour un autre serveur Minecraft est interdite et entraîne un ban définitif." },
+      { title: "Langue", severity: "info", description: "Le chat principal est en français. L'anglais est toléré." },
+    ],
+  },
+  {
+    name: "PvP & Combat",
+    icon: "⚔️",
+    rules: [
+      { title: "Combat logging", severity: "ban_temp", description: "Se déconnecter en combat est interdit. Un système anti-combat log est en place." },
+      { title: "Spawn killing", severity: "warning", description: "Tuer les joueurs au spawn de manière répétée est interdit." },
+      { title: "Alliances abusives", severity: "warning", description: "Les alliances dépassant 2 factions en raid sont interdites." },
+    ],
+  },
+  {
+    name: "Factions & Bases",
+    icon: "🏰",
+    rules: [
+      { title: "Grief excessif", severity: "ban_temp", description: "Le grief est autorisé en zone non protégée mais le grief massif de spawn ou de zones communautaires est interdit." },
+      { title: "Bases inappropriées", severity: "warning", description: "Les constructions offensantes ou inappropriées seront supprimées sans avertissement." },
+      { title: "Abus de claims", severity: "warning", description: "Ne pas claim autour des bases ennemies pour les bloquer (claim trapping)." },
+    ],
+  },
+  {
+    name: "Triche & Exploits",
+    icon: "🚫",
+    rules: [
+      { title: "Clients modifiés", severity: "ban_def", description: "L'utilisation de hacks, cheats, kill aura, X-Ray ou tout client modifié donnant un avantage est strictement interdit." },
+      { title: "Duplication", severity: "ban_def", description: "Exploiter un bug de duplication est interdit. Signalez les bugs pour être récompensé." },
+      { title: "Autoclicker / Macros", severity: "ban_temp", description: "Les autoclickers au-dessus de 15 CPS et les macros de PvP sont interdits." },
+      { title: "AFK farming", severity: "warning", description: "Les systèmes AFK automatiques sont limités à 4h. Au-delà, un kick automatique intervient." },
+    ],
+  },
+];

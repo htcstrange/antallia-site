@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env.production.local
+.env.development.local
+*.tsbuildinfo
+next-env.d.ts
+data/tokens.json
+data/users.json
+Site_Antallia/
