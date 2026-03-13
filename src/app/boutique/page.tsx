@@ -1,8 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { SHOP_ITEMS, SHOP_CATEGORIES, ShopItem } from "@/data/shop";
+import { useState, useEffect } from "react";
 import CheckoutModal from "@/components/CheckoutModal";
+
+interface ShopItem {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  priceInCents: number;
+  category: string;
+  rarity: "commun" | "rare" | "epique" | "legendaire";
+  features?: string[];
+}
 
 const RARITY_BADGES: Record<string, string> = {
   commun: "badge-cyan",
@@ -25,13 +35,7 @@ const RARITY_GLOW: Record<string, string> = {
   legendaire: "hover:shadow-[0_0_25px_-4px_rgba(245,158,11,0.4)]",
 };
 
-function ProductCard({
-  item,
-  onBuy,
-}: {
-  item: ShopItem;
-  onBuy: (item: ShopItem) => void;
-}) {
+function ProductCard({ item, onBuy }: { item: ShopItem; onBuy: (item: ShopItem) => void }) {
   return (
     <div className={`card-hover flex flex-col h-full ${RARITY_GLOW[item.rarity]}`}>
       <div className="flex items-center justify-between mb-3">
@@ -49,10 +53,7 @@ function ProductCard({
           ))}
         </ul>
       )}
-      <button
-        onClick={() => onBuy(item)}
-        className="btn-primary w-full !text-xs mt-auto"
-      >
+      <button onClick={() => onBuy(item)} className="btn-primary w-full !text-xs mt-auto">
         Acheter
       </button>
     </div>
@@ -60,12 +61,23 @@ function ProductCard({
 }
 
 export default function BoutiquePage() {
+  const [items, setItems] = useState<ShopItem[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [selectedItem, setSelectedItem] = useState<ShopItem | null>(null);
 
-  const filtered = activeCategory === "Tous"
-    ? SHOP_ITEMS
-    : SHOP_ITEMS.filter((i) => i.category === activeCategory);
+  useEffect(() => {
+    fetch("/api/admin/shop")
+      .then((r) => r.json())
+      .then((data: ShopItem[]) => {
+        setItems(data);
+        const cats = Array.from(new Set(data.map((i) => i.category)));
+        setCategories(cats);
+      })
+      .catch(() => {});
+  }, []);
+
+  const filtered = activeCategory === "Tous" ? items : items.filter((i) => i.category === activeCategory);
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
@@ -75,7 +87,7 @@ export default function BoutiquePage() {
       </div>
 
       <div className="flex flex-wrap gap-2 justify-center mb-10">
-        {["Tous", ...SHOP_CATEGORIES].map((cat) => (
+        {["Tous", ...categories].map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
@@ -101,10 +113,7 @@ export default function BoutiquePage() {
       )}
 
       {selectedItem && (
-        <CheckoutModal
-          item={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
+        <CheckoutModal item={selectedItem} onClose={() => setSelectedItem(null)} />
       )}
     </div>
   );

@@ -7,7 +7,17 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import StripeProvider from "./StripeProvider";
-import { type ShopItem } from "@/data/shop";
+
+interface ShopItem {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  priceInCents: number;
+  category: string;
+  rarity: string;
+  features?: string[];
+}
 
 interface CheckoutModalProps {
   item: ShopItem;

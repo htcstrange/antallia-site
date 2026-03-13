@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { SHOP_ITEMS } from "@/data/shop";
+import { readJSON } from "@/lib/data";
+
+interface ShopItem {
+  id: string;
+  name: string;
+  priceInCents: number;
+  [key: string]: unknown;
+}
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +29,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const item = SHOP_ITEMS.find((i) => i.id === itemId);
+    const shopItems = readJSON<ShopItem[]>("shop.json");
+    const item = shopItems.find((i) => i.id === itemId);
     if (!item) {
       return NextResponse.json(
         { error: "Article introuvable." },

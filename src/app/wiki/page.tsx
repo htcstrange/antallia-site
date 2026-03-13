@@ -1,13 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import { WIKI_ARTICLES, WIKI_CATEGORIES } from "@/data/wiki";
+import { useState, useEffect } from "react";
+
+interface WikiArticle {
+  id: string;
+  title: string;
+  category: string;
+  content: string;
+}
+
+const WIKI_CATEGORIES = [
+  "Commandes", "Factions", "Économie", "Minerais & Outils", "Jobs",
+  "Enchantements", "Machines", "Boss", "Quêtes", "Compétences",
+  "Familiers", "Dimension du Vide", "Événements", "Blocs Décoratifs",
+];
 
 export default function WikiPage() {
+  const [articles, setArticles] = useState<WikiArticle[]>([]);
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Tous");
 
-  const filtered = WIKI_ARTICLES.filter((a) => {
+  useEffect(() => {
+    fetch("/api/admin/wiki").then((r) => r.json()).then(setArticles).catch(() => {});
+  }, []);
+
+  const filtered = articles.filter((a) => {
     const matchSearch =
       !search ||
       a.title.toLowerCase().includes(search.toLowerCase()) ||

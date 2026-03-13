@@ -1,0 +1,34 @@
+[
+  {
+    "id": "update-v1",
+    "title": "Lancement du serveur — Version BetaTest",
+    "date": "2026-03-01",
+    "tag": "Annonce",
+    "summary": "Antallia ouvre ses portes ! Découvrez toutes les features disponibles au lancement.",
+    "content": "Le serveur Antallia PVP Faction est officiellement ouvert !\n\n**Ce qui vous attend :**\n- Système de Factions complet avec power et claims\n- Économie équilibrée avec /shop et /ah\n- 6 enchantements exclusifs\n- Donjons PvE avec boss\n- Événements automatiques (KOTH, Boss Raid, Envoy)\n- Système de quêtes journalières\n\nRejoignez-nous sur play.antallia-pvp-faction.fr !"
+  },
+  {
+    "id": "event-koth",
+    "title": "Premier tournoi KOTH ce samedi",
+    "date": "2026-03-08",
+    "tag": "Événement",
+    "summary": "Le premier King of the Hill officiel aura lieu samedi à 16h. Récompenses exclusives à gagner !",
+    "content": "Le premier grand tournoi KOTH d'Antallia arrive ce samedi !\n\n**Détails :**\n- Date : Samedi 8 mars à 16h\n- Durée : 30 minutes\n- Lieu : Arène KOTH (warp automatique)\n\n**Récompenses :**\n- 1er : Grade Héros + 100 000$ + Kit Légendaire\n- 2ème : 50 000$ + Kit Épique\n- 3ème : 25 000$ + Kit Rare\n\nPréparez vos armures et potions !"
+  },
+  {
+    "id": "update-enchants",
+    "title": "Nouveaux enchantements custom",
+    "date": "2026-03-05",
+    "tag": "Mise à jour",
+    "summary": "3 nouveaux enchantements exclusifs ont été ajoutés : Célérité, Pillage et Extraction.",
+    "content": "Mise à jour des enchantements !\n\n**Nouveaux enchantements :**\n- **Célérité I-II** — Boost de vitesse après un kill\n- **Pillage I-III** — Augmente les drops des mobs\n- **Extraction I-II** — Auto-smelt des minerais\n\nCes livres sont obtenables dans les donjons et lors des événements Boss Raid."
+  },
+  {
+    "id": "maintenance-1",
+    "title": "Maintenance prévue mardi",
+    "date": "2026-03-10",
+    "tag": "Maintenance",
+    "summary": "Une maintenance de 2h est prévue mardi pour améliorer les performances du serveur.",
+    "content": "Maintenance prévue mardi 10 mars de 14h à 16h.\n\n**Améliorations :**\n- Optimisation du TPS en zone de raid\n- Fix du bug de duplication d'items au /ah\n- Amélioration de l'anti-cheat\n- Réinitialisation du End\n\nLe serveur sera inaccessible pendant cette période. Merci de votre compréhension !"
+  }
+]

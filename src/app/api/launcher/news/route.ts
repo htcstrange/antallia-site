@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { NEWS } from "@/data/news";
+import { readJSON } from "@/lib/data";
 
 export async function GET() {
-  return NextResponse.json(NEWS);
+  const news = readJSON("news.json");
+  return NextResponse.json(news);
 }

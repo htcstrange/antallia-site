@@ -1,8 +1,30 @@
 "use client";
 
-import { NEWS, NEWS_TAG_COLORS } from "@/data/news";
+import { useEffect, useState } from "react";
+
+interface NewsArticle {
+  id: string;
+  title: string;
+  date: string;
+  tag: string;
+  summary: string;
+  content: string;
+}
+
+const NEWS_TAG_COLORS: Record<string, string> = {
+  "Mise à jour": "badge-cyan",
+  "Événement": "badge-purple",
+  "Maintenance": "badge-amber",
+  "Annonce": "badge-green",
+};
 
 export default function ActualitesPage() {
+  const [articles, setArticles] = useState<NewsArticle[]>([]);
+
+  useEffect(() => {
+    fetch("/api/admin/news").then((r) => r.json()).then(setArticles).catch(() => {});
+  }, []);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="text-center mb-12">
@@ -11,10 +33,10 @@ export default function ActualitesPage() {
       </div>
 
       <div className="space-y-6">
-        {NEWS.map((article) => (
+        {articles.map((article) => (
           <article key={article.id} id={article.id} className="card scroll-mt-24">
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className={`badge ${NEWS_TAG_COLORS[article.tag]}`}>{article.tag}</span>
+              <span className={`badge ${NEWS_TAG_COLORS[article.tag] || "badge-green"}`}>{article.tag}</span>
               <time className="text-sm text-gray-500">{new Date(article.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}</time>
             </div>
             <h2 className="text-xl font-bold text-white mb-3">{article.title}</h2>
@@ -39,6 +61,10 @@ export default function ActualitesPage() {
           </article>
         ))}
       </div>
+
+      {articles.length === 0 && (
+        <p className="text-center text-gray-500 py-16">Chargement des actualités...</p>
+      )}
     </div>
   );
 }

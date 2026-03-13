@@ -1,11 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import ServerStatus from "@/components/ServerStatus";
 import CopyIP from "@/components/CopyIP";
 import DiscordWidget from "@/components/DiscordWidget";
-import { NEWS } from "@/data/news";
+
+interface NewsArticle {
+  id: string;
+  title: string;
+  date: string;
+  tag: string;
+  summary: string;
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -43,7 +51,14 @@ const features = [
 ];
 
 export default function HomePage() {
-  const recentNews = NEWS.slice(0, 3);
+  const [recentNews, setRecentNews] = useState<NewsArticle[]>([]);
+
+  useEffect(() => {
+    fetch("/api/admin/news")
+      .then((r) => r.json())
+      .then((data: NewsArticle[]) => setRecentNews(data.slice(0, 3)))
+      .catch(() => {});
+  }, []);
 
   return (
     <div>

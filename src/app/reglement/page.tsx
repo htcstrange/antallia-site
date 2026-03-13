@@ -1,8 +1,33 @@
 "use client";
 
-import { RULES, SEVERITY_LABELS } from "@/data/rules";
+import { useEffect, useState } from "react";
+
+interface Rule {
+  title: string;
+  severity: string;
+  description: string;
+}
+
+interface RuleCategory {
+  name: string;
+  icon: string;
+  rules: Rule[];
+}
+
+const SEVERITY_LABELS: Record<string, { label: string; class: string }> = {
+  info: { label: "Info", class: "badge-cyan" },
+  warning: { label: "Avertissement", class: "badge-amber" },
+  ban_temp: { label: "Ban temporaire", class: "badge-purple" },
+  ban_def: { label: "Ban définitif", class: "badge-red" },
+};
 
 export default function ReglementPage() {
+  const [rules, setRules] = useState<RuleCategory[]>([]);
+
+  useEffect(() => {
+    fetch("/api/admin/rules").then((r) => r.json()).then(setRules).catch(() => {});
+  }, []);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="text-center mb-12">
@@ -19,7 +44,7 @@ export default function ReglementPage() {
       </div>
 
       <div className="space-y-8">
-        {RULES.map((cat) => (
+        {rules.map((cat) => (
           <div key={cat.name} className="card">
             <h2 className="text-xl font-bold text-white mb-5 flex items-center gap-3">
               <span className="text-2xl">{cat.icon}</span>
@@ -33,8 +58,8 @@ export default function ReglementPage() {
                 >
                   <div className="flex items-start sm:items-center justify-between gap-3 flex-col sm:flex-row">
                     <h3 className="font-semibold text-white">{rule.title}</h3>
-                    <span className={`badge ${SEVERITY_LABELS[rule.severity].class} shrink-0`}>
-                      {SEVERITY_LABELS[rule.severity].label}
+                    <span className={`badge ${SEVERITY_LABELS[rule.severity]?.class || "badge-cyan"} shrink-0`}>
+                      {SEVERITY_LABELS[rule.severity]?.label || rule.severity}
                     </span>
                   </div>
                   <p className="text-sm text-gray-400 mt-2 leading-relaxed">{rule.description}</p>

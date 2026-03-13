@@ -32,6 +32,7 @@ export default function Footer() {
               <Link href="/actualites" className="block text-sm text-gray-400 hover:text-neon-purple transition">Actualités</Link>
               <Link href="/equipe" className="block text-sm text-gray-400 hover:text-neon-purple transition">Équipe</Link>
               <Link href="/reglement" className="block text-sm text-gray-400 hover:text-neon-purple transition">Règlement</Link>
+              <Link href="/admin" className="block text-sm text-gray-400 hover:text-neon-purple transition">Panel Admin</Link>
             </div>
           </div>
 
