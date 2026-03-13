@@ -3,6 +3,7 @@ export interface ShopItem {
   name: string;
   description: string;
   price: string;
+  priceInCents: number;
   category: string;
   rarity: "commun" | "rare" | "epique" | "legendaire";
   features?: string[];
@@ -16,6 +17,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Grade VIP",
     description: "Accès aux commandes /fly, /heal, /feed et kit VIP quotidien.",
     price: "4,99 €",
+    priceInCents: 499,
     category: "Grades",
     rarity: "rare",
     features: ["/fly en zone protégée", "/heal & /feed", "Kit VIP quotidien"],
@@ -25,6 +27,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Grade Héros",
     description: "Tous les avantages VIP + /enchant, /repair et accès au /warp secret.",
     price: "9,99 €",
+    priceInCents: 999,
     category: "Grades",
     rarity: "epique",
     features: ["Tout le VIP inclus", "/enchant & /repair", "Warp secret"],
@@ -34,6 +37,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Grade Légende",
     description: "Le grade ultime avec tous les avantages et des bonus exclusifs.",
     price: "19,99 €",
+    priceInCents: 1999,
     category: "Grades",
     rarity: "legendaire",
     features: ["Tout le Héros inclus", "/nick & /disguise", "Particules personnalisées"],
@@ -43,6 +47,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Kit PvP Starter",
     description: "Armure en diamant Protection I + épée Tranchant III.",
     price: "2,99 €",
+    priceInCents: 299,
     category: "Kits",
     rarity: "commun",
   },
@@ -51,6 +56,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Kit Raid Master",
     description: "TNT x64, ender pearls x16, potions de force et de régénération.",
     price: "4,99 €",
+    priceInCents: 499,
     category: "Kits",
     rarity: "rare",
   },
@@ -59,6 +65,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Kit Builder Pro",
     description: "Blocs variés x256, outils Efficacité V, échafaudages x64.",
     price: "3,49 €",
+    priceInCents: 349,
     category: "Kits",
     rarity: "commun",
   },
@@ -67,6 +74,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Aura de Flammes",
     description: "Particules de flammes qui suivent ton personnage.",
     price: "1,99 €",
+    priceInCents: 199,
     category: "Cosmétiques",
     rarity: "rare",
   },
@@ -75,6 +83,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Trail Arc-en-ciel",
     description: "Laisse une traînée colorée derrière toi en marchant.",
     price: "1,49 €",
+    priceInCents: 149,
     category: "Cosmétiques",
     rarity: "commun",
   },
@@ -83,6 +92,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Ailes d",
     description: "Des ailes d",
     price: "4,99 €",
+    priceInCents: 499,
     category: "Cosmétiques",
     rarity: "legendaire",
   },
@@ -91,6 +101,7 @@ export const SHOP_ITEMS: ShopItem[] = [
     name: "Pack 50 000$",
     description: "50 000$ de monnaie en jeu pour acheter au /shop.",
     price: "2,49 €",
+    priceInCents: 249,
     category: "Divers",
     rarity: "commun",
   },

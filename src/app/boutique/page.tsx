@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SHOP_ITEMS, SHOP_CATEGORIES, ShopItem } from "@/data/shop";
+import CheckoutModal from "@/components/CheckoutModal";
 
 const RARITY_BADGES: Record<string, string> = {
   commun: "badge-cyan",
@@ -24,7 +25,13 @@ const RARITY_GLOW: Record<string, string> = {
   legendaire: "hover:shadow-[0_0_25px_-4px_rgba(245,158,11,0.4)]",
 };
 
-function ProductCard({ item }: { item: ShopItem }) {
+function ProductCard({
+  item,
+  onBuy,
+}: {
+  item: ShopItem;
+  onBuy: (item: ShopItem) => void;
+}) {
   return (
     <div className={`card-hover flex flex-col h-full ${RARITY_GLOW[item.rarity]}`}>
       <div className="flex items-center justify-between mb-3">
@@ -42,20 +49,19 @@ function ProductCard({ item }: { item: ShopItem }) {
           ))}
         </ul>
       )}
-      <a
-        href="https://discord.gg/h4cuQqfNU7"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={() => onBuy(item)}
         className="btn-primary w-full !text-xs mt-auto"
       >
-        Acheter via Discord
-      </a>
+        Acheter
+      </button>
     </div>
   );
 }
 
 export default function BoutiquePage() {
   const [activeCategory, setActiveCategory] = useState("Tous");
+  const [selectedItem, setSelectedItem] = useState<ShopItem | null>(null);
 
   const filtered = activeCategory === "Tous"
     ? SHOP_ITEMS
@@ -86,12 +92,19 @@ export default function BoutiquePage() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map((item) => (
-          <ProductCard key={item.id} item={item} />
+          <ProductCard key={item.id} item={item} onBuy={setSelectedItem} />
         ))}
       </div>
 
       {filtered.length === 0 && (
         <p className="text-center text-gray-500 py-16">Aucun article dans cette catégorie.</p>
+      )}
+
+      {selectedItem && (
+        <CheckoutModal
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
       )}
     </div>
   );
