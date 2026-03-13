@@ -46,6 +46,7 @@ export default function StripeProvider({
   const options: StripeElementsOptions = {
     clientSecret,
     appearance: APPEARANCE,
+    locale: "fr",
   };
 
   return (
