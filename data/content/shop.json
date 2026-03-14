@@ -1,19 +1,5 @@
 [
   {
-    "id": "grade-hero",
-    "name": "Grade Héros",
-    "description": "Tous les avantages VIP + /enchant, /repair et accès au /warp secret.",
-    "price": "9,99 €",
-    "priceInCents": 999,
-    "category": "Grades",
-    "rarity": "epique",
-    "features": [
-      "Tout le VIP inclus",
-      "/enchant & /repair",
-      "Warp secret"
-    ]
-  },
-  {
     "id": "grade-legende",
     "name": "Grade Légende",
     "description": "Le grade ultime avec tous les avantages et des bonus exclusifs.",
