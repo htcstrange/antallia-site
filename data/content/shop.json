@@ -9,13 +9,13 @@
     "rarity": "commun"
   },
   {
-    "id": "kit-raid",
-    "name": "Kit Raid Master",
-    "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
-    "price": "4,99 €",
-    "priceInCents": 499,
+    "id": "kit-builder",
+    "name": "Kit Builder Pro",
+    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
+    "price": "3,49 €",
+    "priceInCents": 349,
     "category": "Kits",
-    "rarity": "rare"
+    "rarity": "commun"
   },
   {
     "id": "cosm-trail",
