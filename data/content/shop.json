@@ -18,12 +18,12 @@
     "rarity": "rare"
   },
   {
-    "id": "kit-builder",
-    "name": "Kit Builder Pro",
-    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
-    "price": "3,49 €",
-    "priceInCents": 349,
-    "category": "Kits",
+    "id": "cosm-trail",
+    "name": "Trail Arc-en-ciel",
+    "description": "Laisse une traînée colorée derrière toi en marchant.",
+    "price": "1,49 €",
+    "priceInCents": 149,
+    "category": "Cosmétiques",
     "rarity": "commun"
   },
   {
