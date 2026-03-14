@@ -9,15 +9,6 @@
     "rarity": "commun"
   },
   {
-    "id": "kit-raid",
-    "name": "Kit Raid Master",
-    "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
-    "price": "4,99 €",
-    "priceInCents": 499,
-    "category": "Kits",
-    "rarity": "rare"
-  },
-  {
     "id": "kit-builder",
     "name": "Kit Builder Pro",
     "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
@@ -45,12 +36,12 @@
     "rarity": "commun"
   },
   {
-    "id": "money-pack",
-    "name": "Pack 50 000$",
-    "description": "50 000$ de monnaie en jeu pour acheter au /shop.",
-    "price": "2,49 €",
-    "priceInCents": 249,
-    "category": "Divers",
-    "rarity": "commun"
+    "id": "cosm-wings",
+    "name": "Ailes d'Ange",
+    "description": "Des ailes d'ange cosmétiques visibles par tous.",
+    "price": "4,99 €",
+    "priceInCents": 499,
+    "category": "Cosmétiques",
+    "rarity": "legendaire"
   }
 ]
