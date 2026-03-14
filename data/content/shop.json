@@ -1,14 +1,5 @@
 [
   {
-    "id": "kit-pvp",
-    "name": "Kit PvP Starter",
-    "description": "Armure en diamant Protection I + épée Tranchant III.",
-    "price": "2,99 €",
-    "priceInCents": 299,
-    "category": "Kits",
-    "rarity": "commun"
-  },
-  {
     "id": "kit-raid",
     "name": "Kit Raid Master",
     "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
