@@ -18,13 +18,13 @@
     "rarity": "rare"
   },
   {
-    "id": "cosm-aura",
-    "name": "Aura de Flammes",
-    "description": "Particules de flammes qui suivent ton personnage.",
-    "price": "1,99 €",
-    "priceInCents": 199,
-    "category": "Cosmétiques",
-    "rarity": "rare"
+    "id": "kit-builder",
+    "name": "Kit Builder Pro",
+    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
+    "price": "3,49 €",
+    "priceInCents": 349,
+    "category": "Kits",
+    "rarity": "commun"
   },
   {
     "id": "cosm-trail",
