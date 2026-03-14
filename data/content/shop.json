@@ -27,13 +27,13 @@
     "rarity": "commun"
   },
   {
-    "id": "cosm-trail",
-    "name": "Trail Arc-en-ciel",
-    "description": "Laisse une traînée colorée derrière toi en marchant.",
-    "price": "1,49 €",
-    "priceInCents": 149,
+    "id": "cosm-aura",
+    "name": "Aura de Flammes",
+    "description": "Particules de flammes qui suivent ton personnage.",
+    "price": "1,99 €",
+    "priceInCents": 199,
     "category": "Cosmétiques",
-    "rarity": "commun"
+    "rarity": "rare"
   },
   {
     "id": "cosm-wings",
