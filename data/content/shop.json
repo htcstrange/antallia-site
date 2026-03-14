@@ -1,12 +1,12 @@
 [
   {
-    "id": "kit-raid",
-    "name": "Kit Raid Master",
-    "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
-    "price": "4,99 €",
-    "priceInCents": 499,
+    "id": "kit-pvp",
+    "name": "Kit PvP Starter",
+    "description": "Armure en diamant Protection I + épée Tranchant III.",
+    "price": "2,99 €",
+    "priceInCents": 299,
     "category": "Kits",
-    "rarity": "rare"
+    "rarity": "commun"
   },
   {
     "id": "kit-builder",
@@ -33,15 +33,6 @@
     "price": "1,49 €",
     "priceInCents": 149,
     "category": "Cosmétiques",
-    "rarity": "commun"
-  },
-  {
-    "id": "money-pack",
-    "name": "Pack 50 000$",
-    "description": "50 000$ de monnaie en jeu pour acheter au /shop.",
-    "price": "2,49 €",
-    "priceInCents": 249,
-    "category": "Divers",
     "rarity": "commun"
   }
 ]
