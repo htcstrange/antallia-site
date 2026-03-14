@@ -9,15 +9,6 @@
     "rarity": "rare"
   },
   {
-    "id": "kit-builder",
-    "name": "Kit Builder Pro",
-    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
-    "price": "3,49 €",
-    "priceInCents": 349,
-    "category": "Kits",
-    "rarity": "commun"
-  },
-  {
     "id": "money-pack",
     "name": "Pack 50 000$",
     "description": "50 000$ de monnaie en jeu pour acheter au /shop.",
