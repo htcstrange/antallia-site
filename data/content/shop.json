@@ -3,8 +3,8 @@
     "id": "item-1773482025319",
     "name": "test",
     "description": "dzdz",
-    "price": "0.01",
-    "priceInCents": 1,
+    "price": "0.50",
+    "priceInCents": 50,
     "category": "Divers",
     "rarity": "epique"
   }
