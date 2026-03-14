@@ -1,14 +1,5 @@
 [
   {
-    "id": "kit-pvp",
-    "name": "Kit PvP Starter",
-    "description": "Armure en diamant Protection I + épée Tranchant III.",
-    "price": "2,99 €",
-    "priceInCents": 299,
-    "category": "Kits",
-    "rarity": "commun"
-  },
-  {
     "id": "kit-raid",
     "name": "Kit Raid Master",
     "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
@@ -16,6 +7,15 @@
     "priceInCents": 499,
     "category": "Kits",
     "rarity": "rare"
+  },
+  {
+    "id": "kit-builder",
+    "name": "Kit Builder Pro",
+    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
+    "price": "3,49 €",
+    "priceInCents": 349,
+    "category": "Kits",
+    "rarity": "commun"
   },
   {
     "id": "cosm-trail",
