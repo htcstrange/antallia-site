@@ -36,13 +36,13 @@
     "rarity": "rare"
   },
   {
-    "id": "cosm-wings",
-    "name": "Ailes d'Ange",
-    "description": "Des ailes d'ange cosmétiques visibles par tous.",
-    "price": "4,99 €",
-    "priceInCents": 499,
+    "id": "cosm-trail",
+    "name": "Trail Arc-en-ciel",
+    "description": "Laisse une traînée colorée derrière toi en marchant.",
+    "price": "1,49 €",
+    "priceInCents": 149,
     "category": "Cosmétiques",
-    "rarity": "legendaire"
+    "rarity": "commun"
   },
   {
     "id": "money-pack",
