@@ -1,12 +1,12 @@
 [
   {
-    "id": "kit-pvp",
-    "name": "Kit PvP Starter",
-    "description": "Armure en diamant Protection I + épée Tranchant III.",
-    "price": "2,99 €",
-    "priceInCents": 299,
+    "id": "kit-raid",
+    "name": "Kit Raid Master",
+    "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
+    "price": "4,99 €",
+    "priceInCents": 499,
     "category": "Kits",
-    "rarity": "commun"
+    "rarity": "rare"
   },
   {
     "id": "kit-builder",
@@ -18,6 +18,15 @@
     "rarity": "commun"
   },
   {
+    "id": "cosm-aura",
+    "name": "Aura de Flammes",
+    "description": "Particules de flammes qui suivent ton personnage.",
+    "price": "1,99 €",
+    "priceInCents": 199,
+    "category": "Cosmétiques",
+    "rarity": "rare"
+  },
+  {
     "id": "cosm-trail",
     "name": "Trail Arc-en-ciel",
     "description": "Laisse une traînée colorée derrière toi en marchant.",
@@ -25,15 +34,6 @@
     "priceInCents": 149,
     "category": "Cosmétiques",
     "rarity": "commun"
-  },
-  {
-    "id": "cosm-wings",
-    "name": "Ailes d'Ange",
-    "description": "Des ailes d'ange cosmétiques visibles par tous.",
-    "price": "4,99 €",
-    "priceInCents": 499,
-    "category": "Cosmétiques",
-    "rarity": "legendaire"
   },
   {
     "id": "money-pack",
