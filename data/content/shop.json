@@ -18,15 +18,6 @@
     "rarity": "commun"
   },
   {
-    "id": "cosm-trail",
-    "name": "Trail Arc-en-ciel",
-    "description": "Laisse une traînée colorée derrière toi en marchant.",
-    "price": "1,49 €",
-    "priceInCents": 149,
-    "category": "Cosmétiques",
-    "rarity": "commun"
-  },
-  {
     "id": "money-pack",
     "name": "Pack 50 000$",
     "description": "50 000$ de monnaie en jeu pour acheter au /shop.",
