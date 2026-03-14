@@ -9,21 +9,12 @@
     "rarity": "commun"
   },
   {
-    "id": "kit-builder",
-    "name": "Kit Builder Pro",
-    "description": "Blocs variés x256, outils Efficacité V, échafaudages x64.",
-    "price": "3,49 €",
-    "priceInCents": 349,
+    "id": "kit-raid",
+    "name": "Kit Raid Master",
+    "description": "TNT x64, ender pearls x16, potions de force et de régénération.",
+    "price": "4,99 €",
+    "priceInCents": 499,
     "category": "Kits",
-    "rarity": "commun"
-  },
-  {
-    "id": "cosm-aura",
-    "name": "Aura de Flammes",
-    "description": "Particules de flammes qui suivent ton personnage.",
-    "price": "1,99 €",
-    "priceInCents": 199,
-    "category": "Cosmétiques",
     "rarity": "rare"
   },
   {
@@ -33,6 +24,15 @@
     "price": "1,49 €",
     "priceInCents": 149,
     "category": "Cosmétiques",
+    "rarity": "commun"
+  },
+  {
+    "id": "money-pack",
+    "name": "Pack 50 000$",
+    "description": "50 000$ de monnaie en jeu pour acheter au /shop.",
+    "price": "2,49 €",
+    "priceInCents": 249,
+    "category": "Divers",
     "rarity": "commun"
   }
 ]
